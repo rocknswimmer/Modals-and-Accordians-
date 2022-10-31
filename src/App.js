@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import './App.css';
 import Modal from './modal';
+import Accordion from './accordian';
 
 function App() {
   const [startPrezy, setStartPrezy] = useState(false);
@@ -25,7 +26,8 @@ function App() {
       close={() => {openModal()}}
       content={<button onClick={openAccordian}>open accordian</button>}
       />}
-      {displayAcc && <div>accordian here</div>}
+      {/* will propable need to make an accodion feed */}
+      {displayAcc && <Accordion />}
 
     </div>
   );
