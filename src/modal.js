@@ -1,15 +1,15 @@
 import './modal.css';
 
-const Modal = (props) => {
+const Modal = ({close, content}) => {
 
   // the css on these elements are what really make the modal a pop up
   return (
-    <div className="modal">
-      <div className="modal-pop">  {/* where the modal content will go */}
-         <div className='modal-close'> <button onClick={() => { props.close(); }}>x</button> </div>
-        {props.content}
+    <div className="modal"> {/*The container for the two components that will make up the modal */}
+      <div className="modal-pop">  {/* Where the modal content will go including the close button */}
+         <div className='modal-close'> <button onClick={() => { close(); }}>x</button> </div>
+        {content}
       </div>
-      <div className="modal-overlay"></div>
+      <div className="modal-overlay"></div> {/* the element that covers up the rest of the site */}
     </div>
   );
 };
