@@ -16,6 +16,7 @@ function App() {
     setDisplayAcc(!displayAcc);
   }
 
+
   return (
     <div className="App">
       {endPrezy && <button onClick={openModal}>OPEN MODAL</button>}
