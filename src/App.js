@@ -60,8 +60,8 @@ function App() {
        <div>
         <h1>Laughter Data</h1>
         <div>
-          {prezyData.accordionData.map(({title, content}) => {
-            return <Accordion title={title} content={content} />
+          {prezyData.accordionData.map(({title, content}, i) => {
+            return <Accordion title={title} content={content} key={i} />
           })}
         </div>
         <button onClick={() => { setEndPrezy(!endPrezy); setShowData(!showData); } }>END PREZY</button>
