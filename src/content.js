@@ -1,5 +1,4 @@
-export const prezyData = [
-  {
+export const prezyData = {
     modalData: {
     firstModal: {
       content: 'first modals content'
@@ -25,5 +24,4 @@ export const prezyData = [
 
   ]
 
-  }
-];
+  };
