@@ -1,0 +1,15 @@
+.accordion-title {
+  display: flex;
+  justify-content: space-between;
+  background-color: #126ed8;
+  color: rgb(254, 253, 253);
+}
+
+.accordion-item {
+  max-width: 80vw;
+  min-width: 50vw;
+  background-color: #46e8fa;
+  color: black;
+
+  margin: 25px;
+}

@@ -27,14 +27,21 @@ function App() {
       {endPrezy && <button onClick={openModal}>OPEN MODAL EXAMPLE</button>}
       {startPrezy &&
       <Modal
-        close={() => {openModal()}}
-        content={<button onClick={openAccordian}>OPEN ACCORDION EXAMPLE</button>}
+        close={() => {setStartPrezy(!startPrezy);}}
+        content={<div><div>Modal/Dialog - These are for getting work done. (Example: a button that says "Invite Friends" will open such a container with a list friends you can then invite). These let you do more work without having to show all the information on the main screen. These messages are not locked and you can click anywhere to dismiss the container.</div><br/><div>Popup - You don't need to deal with these messages right away, yet at some point you will need to take action since these won't go away until explicitly say say you don't want them around anymore.</div> <br/><button onClick={openAccordian}>OPEN ACCORDION EXAMPLE</button></div>}
       />}
       {/* will propable need to make an accodion feed */}
       {displayAcc &&
       <Accordion
         title={'ACCORDION EXAMPLE'}
+        content={
+        <div>
+          The term stems from the musical accordion in which sections of the bellows can be expanded by pulling outward. A common example of an accordion is the Show/Hide operation of a box region, but extended to have multiple sections in a list.
+        <Accordion
+        title={'???'}
         content={ <button onClick={() => { setDisplayAcc(!displayAcc); setStartInnerPrezy(!startInnerPrezy); }}>???</button>}
+       />
+        </div>}
        />}
        {startInnerPrezy &&
        <Modal
@@ -48,7 +55,7 @@ function App() {
        />}
        {secondSlide &&
        <Modal
-         close={() => { setStartInnerPrezy(!startInnerPrezy); }}
+         close={() => { setSecondSlide(!secondSlide); }}
          content={
            <div>
             {prezyData.modalData.secondModal.content} <br/>
