@@ -9,7 +9,7 @@ const Modal = ({close, content}) => {
          <div className='modal-close'> <button onClick={() => { close(); }}>x</button> </div>
         {content}
       </div>
-      <div className="modal-overlay"></div> {/* the element that covers up the rest of the site */}
+      <div className="modal-overlay" onClick={() => { close(); }}></div> {/* the element that covers up the rest of the site */}
     </div>
   );
 };
